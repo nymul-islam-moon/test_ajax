@@ -12,13 +12,13 @@
             </div>
         </div>
     </div>
-    @if ($message = Session::get('success'))
+    {{-- @if ($message = Session::get('success'))
 
         <div class="alert alert-success">
-            <p>{{ $message }}</p>
+            <p>hi</p>
         </div>
 
-    @endif
+    @endif --}}
     <div class="card-body">
         <table class="table table-bordered" id="ajax-crud-datatable">
             <thead>

@@ -41,7 +41,7 @@ class DataTableAjaxCRUDController extends Controller
                     'address' => $request->address
                     ]);
 
-        return Response()->json($company);
+        return response()->json('Allocation created successfully');
 
     }
 
