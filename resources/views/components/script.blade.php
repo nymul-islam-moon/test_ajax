@@ -106,14 +106,13 @@
 
     $('#CompanyForm').submit(function(e) {
         e.preventDefault();
-        var formData = new FormData(this);
-
+        var url = $(this).attr('action');
         $.ajax({
+            url: url,
             type:'POST',
-            url: "{{ url('store-company')}}",
-            data: formData,
-            cache:false,
+            data: new FormData(this),
             contentType: false,
+            cache:false,
             processData: false,
             success: (data) => {
                 $("#company-modal").modal('hide');
@@ -122,8 +121,8 @@
                 $("#btn-save").html('Submit');
                 $("#btn-save"). attr("disabled", false);
             },
-            error: function(data){
-                console.log(data);
+            error: function(err){
+                console.log(err);
             }
         });
     });

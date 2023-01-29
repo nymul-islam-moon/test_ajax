@@ -12,13 +12,7 @@
             </div>
         </div>
     </div>
-    {{-- @if ($message = Session::get('success'))
 
-        <div class="alert alert-success">
-            <p>hi</p>
-        </div>
-
-    @endif --}}
     <div class="card-body">
         <table class="table table-bordered" id="ajax-crud-datatable">
             <thead>
@@ -42,24 +36,24 @@
                     <h4 class="modal-title" id="CompanyModal"></h4>
                 </div>
                 <div class="modal-body">
-                    <form action="javascript:void(0)" id="CompanyForm" name="CompanyForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('company.store') }}" id="CompanyForm" name="CompanyForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id" id="id">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Company Name</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Company Name" maxlength="50" required="">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Company Name" maxlength="50">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">Company Email</label>
                             <div class="col-sm-12">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Company Email" maxlength="50" required="">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Company Email" maxlength="50">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Company Address</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Company Address" required="">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Company Address">
                             </div>
                         </div>
                         <div class="col-sm-offset-2 col-sm-10">

@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 
 Route::get('ajax-crud-datatable', [DataTableAjaxCRUDController::class, 'index']);
-Route::post('store-company', [DataTableAjaxCRUDController::class, 'store']);
+Route::post('store-company', [DataTableAjaxCRUDController::class, 'store'])->name('company.store');
 Route::post('edit-company', [DataTableAjaxCRUDController::class, 'edit']);
 Route::post('delete-company', [DataTableAjaxCRUDController::class, 'destroy']);
