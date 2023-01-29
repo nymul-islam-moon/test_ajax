@@ -35,6 +35,10 @@
                     name: 'created_at'
                 },
                 {
+                    data: 'updated_at',
+                    name: 'updated_at'
+                },
+                {
                     data: 'action',
                     name: 'action'
                 },
